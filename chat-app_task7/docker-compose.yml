@@ -5,9 +5,9 @@ services:
 
   backend:
     build: ./chat-backend
-    container_name: chatapp-backend
+    container_name: sidra-chatapp-backend
     ports:
-      - "5000:5000"
+      - "5001:5000"
     env_file:
       - ./chat-backend/.env
     restart: unless-stopped
@@ -17,9 +17,9 @@ services:
 
   frontend:
     build: ./chat-frontend
-    container_name: chatapp-frontend
+    container_name: sidra-chatapp-frontend
     ports:
-      - "3000:80"
+      - "3001:80"
     restart: unless-stopped
     depends_on:
       - backend
@@ -27,12 +27,12 @@ services:
 
   mongo:
     image: mongo:7
-    container_name: chatapp-mongo
+    container_name: sidra-chatapp-mongo
     restart: unless-stopped
     volumes:
-      - mongo-data:/data/db
+      - sidra-mongo-data:/data/db
 
 
 volumes:
 
-  mongo-data:
+  sidra-mongo-data:

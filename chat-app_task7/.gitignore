@@ -1,0 +1,9 @@
+# SSH Deployment Keys
+devzey-deploy-key
+devzey-deploy-key.pub
+
+# Environment files
+.env
+
+# Node modules
+node_modules/
