@@ -17,6 +17,6 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd ~/chat-app-Devzeytask7-streaming/chat-app_task7
+            cd ~/chatapp/chat-app_task7
             git pull origin main
             docker compose up --build -d
