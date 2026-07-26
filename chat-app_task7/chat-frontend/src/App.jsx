@@ -156,7 +156,7 @@ msg.content
             autoResize(e.target);
           }}
           onKeyDown={handleKeyDown}
-          placeholder="Type your question... (Shift+Enter for new line)"
+          placeholder="Type here..(Shift+Enter for new line)"
           rows={1}
         />
         <button onClick={sendMessage} disabled={loading || !input.trim()}>
